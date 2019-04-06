@@ -50,6 +50,6 @@ public class NewEmptyJUnitTest {
     public void ganador(){
         Logica principal = new Logica();
         boolean respuesta = principal.ganador("Amarillo");
-        assertFalse(respuesta);
+        assertFalse(respuesta); 
     }//ganador
 }//NewEmptyJUnitTest

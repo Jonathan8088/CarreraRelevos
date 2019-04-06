@@ -94,7 +94,7 @@ public class Logica {
                 equipoRojo = vector;
                 imprimir(equipoRojo,3);
                 if(equipoRojo[49]=='§'){
-                    control = ganador("Rojo");
+                    ganador("Rojo");
                 }//if
             }//if    
         }//if
@@ -150,7 +150,7 @@ public class Logica {
      * metodo que imprime la medalla e indica cual equipo fue el ganador
      * @param equipo variable que contiene el color del equipo ganador
      */
-    public synchronized boolean ganador(String equipo){
+    public static synchronized boolean ganador(String equipo){
         if(control){
             System.out.println("          ||");
             System.out.println("       ||      ||");
@@ -164,6 +164,7 @@ public class Logica {
             System.out.println("     ||          ||");
             System.out.println("        ||    ||");
             System.out.println("          ||");   
+            control = false;
             return false;
         }else{
             return true;
